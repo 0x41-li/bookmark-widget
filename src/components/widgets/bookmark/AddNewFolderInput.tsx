@@ -1,5 +1,6 @@
 import React, {
   KeyboardEvent,
+  SetStateAction,
   useContext,
   useEffect,
   useRef,
@@ -10,7 +11,13 @@ import {
   FoldersContextTypes,
 } from "../../../contexts/bookmarkContext";
 
-const AddNewFolderInput = () => {
+interface AddNewFolderInputPropsType {
+  setIsAddNewFolderInputVisible: React.Dispatch<SetStateAction<boolean>>;
+}
+
+const AddNewFolderInput: React.FC<AddNewFolderInputPropsType> = ({
+  setIsAddNewFolderInputVisible,
+}) => {
   const [inputVal, setInputVal] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const { setFolders } = useContext(foldersContext) as FoldersContextTypes;
@@ -33,6 +40,7 @@ const AddNewFolderInput = () => {
       ]);
 
       setInputVal("");
+      setIsAddNewFolderInputVisible(false);
     }
   }
 

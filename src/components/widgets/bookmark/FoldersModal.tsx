@@ -15,7 +15,7 @@ const FoldersModal: React.FC = () => {
 
       <FoldersList />
 
-      {isAddNewFolderInputVisible && <AddNewFolderInput />}
+      {isAddNewFolderInputVisible && <AddNewFolderInput setIsAddNewFolderInputVisible={setIsAddNewFolderInputVisible} />}
 
       <AddNewFolderButton
         setIsAddNewFolderInputVisible={setIsAddNewFolderInputVisible}

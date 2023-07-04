@@ -60,7 +60,7 @@ const Link: React.FC<LinkProps> = ({ link, index }) => {
         setHoveredOverALink(false);
         setEditDeleteMenuVisibility(false);
       }}
-      onClick={() => openNewTab(formattedLink)}
+      onClick={() => openNewTab(safeLink)}
     >
       <div className="tw-rounded-[7px] tw-py-[10px] tw-pl-[14px] tw-pr-[18px] tw-bg-[rgba(18,_18,_18,_0.30)] tw-mt-[9px] tw-flex tw-justify-between">
         <div className="tw-flex tw-items-center tw-gap-[6px]">

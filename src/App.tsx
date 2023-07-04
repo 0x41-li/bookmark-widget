@@ -17,7 +17,7 @@ function App() {
 
   const [deleteModalVisible, setDeleteModalVisible] = useState(false);
 
-  const [user, setUser] = useState<{ type: string }>({ type: "FREE" });
+  const [user, setUser] = useState<{ type: string }>({ type: "PREMIUM" });
 
   const [isFoldersModalVisible, setIsFoldersModalVisible] = useState(false);
 

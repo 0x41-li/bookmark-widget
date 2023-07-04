@@ -1,5 +1,4 @@
 import React, {
-  MouseEvent,
   MouseEventHandler,
   SetStateAction,
   useContext,
@@ -31,7 +30,7 @@ const DeleteModal: React.FC<DeleteModalPropsType> = ({
             return {
               ...folder,
               links: folder.links.filter(
-                (link, linkIndex) => deleteInfo.index !== linkIndex
+                (_link, linkIndex) => deleteInfo.index !== linkIndex
               ),
             };
           }
@@ -40,7 +39,7 @@ const DeleteModal: React.FC<DeleteModalPropsType> = ({
       });
     } else {
       setFolders((prevState) => {
-        return prevState.filter((folder, index) => index !== deleteInfo.index);
+        return prevState.filter((_folder, index) => index !== deleteInfo.index);
       });
     }
 
